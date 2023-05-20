@@ -136,7 +136,14 @@ footer{
       font-size: 1.2rem; /* Riduci la dimensione del font del pulsante */
       padding: 0.8rem; /* Riduci il padding del pulsante */
     }
+    .quiz-box {
+        position: relative; /* Aggiungi posizione relativa alla .quiz-box */
+      }
+    
     footer {
+        position: absolute; /* Aggiungi posizione assoluta al footer */
+        bottom: 0; /* Posiziona il footer in fondo alla .quiz-box */
+        width: 100%; /* Assicurati che il footer abbia la larghezza completa */
         margin-top: 10px; /* Sposta il footer più in alto */
         font-size: 14px; /* Riduci la dimensione del font del footer */
       }

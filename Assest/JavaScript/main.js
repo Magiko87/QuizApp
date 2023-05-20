@@ -104,7 +104,7 @@ class Quiz {
   displayQuestion();
   
   // Countdown timer
-  let time = 10;
+  let time = 5;
   let quizTimeInSeconds = time * 60;
   let counting = document.getElementById("count-down");
   
