@@ -1,6 +1,7 @@
  body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(58, 58, 58);
+    background: rgb(167,169,171);
+    background: linear-gradient(90deg, rgba(167,169,171,1) 17%, rgba(88,88,89,1) 100%);
 
  }
  img{
@@ -32,10 +33,10 @@
 
  }
  .quiz-box h1 {
-    background-color: rgb(141, 141, 150);
+    background: linear-gradient(90deg, rgba(212,225,238,1) 17%, rgba(186,186,208,1) 100%);
     font-size: 2rem;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(77, 77, 77);
     padding: 1rem 0;
     width: 100%;
     margin-bottom: 2rem;
@@ -57,10 +58,10 @@
  .quiz-header #count-down {
     font-size: 1.2rem;
     font-weight: 700;
-    background-color: rgb(141, 141, 150);
+    background: linear-gradient(90deg, rgba(212,225,238,1) 17%, rgba(186,186,208,1) 100%);
     padding: 5px;
     margin: 1px;
-    color: white;
+    color: rgb(77, 77, 77);
     border-radius: 3px;
  }
 .quiz-box #question {
@@ -78,10 +79,10 @@
 }
 .btn {
     text-align: left;
-    background-color: rgb(58, 58, 58);
+    background: linear-gradient(90deg, rgba(212,225,238,1) 17%, rgba(186,186,208,1) 100%);
     width: 100%;
     font-size: 1rem;
-    color: rgb(255, 255, 255);
+    color: rgb(77, 77, 77);
     border:3px solid rgb(141, 141, 150);
     border-radius: 5px;
     margin: 7px 0;
@@ -91,12 +92,13 @@
 }
 .btn:hover {
     cursor: pointer;
-    background-color: rgb(141, 141, 150);
-    color: white;
+    background: rgb(108, 108, 110);
+    color: black;
 
 }
 .btn:active {
-    background-color: rgb(209, 208, 208);
+    background: rgb(65, 65, 65);
+    color: white;
 }
 #score {
     color: black;
@@ -138,6 +140,12 @@ footer{
     }
     .quiz-box {
         position: relative; /* Aggiungi posizione relativa alla .quiz-box */
+        display: flex; /* Aggiungi display flex */
+        flex-direction: column; /* Imposta direzione dei figli in colonna */
+        justify-content: center; /* Centra verticalmente i figli */
+        align-items: center; /* Centra orizzontalmente i figli */
+        height: 100vh; /* Altezza della quiz-box al 100% della viewport */
+      }
       }
     
     footer {
