@@ -98,7 +98,7 @@
 }
 
 .btn:active,
-.btn:focus
+.btn:focus,
 .btn:hover {
     background-color: rgb(65, 65, 65);
     color: white;
