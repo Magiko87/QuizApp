@@ -1,6 +1,6 @@
  body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: red;
+    background-color: rgb(58, 58, 58);
 
  }
  img{
@@ -25,17 +25,17 @@
     width: 500px;
     height: 90vh;
     margin: 0 auto;
-    background-color: white;
+    background: radial-gradient(circle at 0% 0.5%, rgb(241, 241, 242) 0.1%, rgb(224, 226, 228) 100.2%);
     padding: 1rem 5rem 5rem 5rem;
-    border: 3px solid orange;
+    border: 3px solid rgb(248, 247, 246);
     border-radius: 5px;
 
  }
  .quiz-box h1 {
-    background-color: blue;
+    background-color: rgb(141, 141, 150);
     font-size: 2rem;
     text-align: center;
-    color: blanchedalmond;
+    color: rgb(255, 255, 255);
     padding: 1rem 0;
     width: 100%;
     margin-bottom: 2rem;
@@ -49,7 +49,7 @@
 
  }
  .quiz-header #progress {
-    color:rgb(91, 91, 39) ;
+    color:rgb(1, 1, 1) ;
     font-size: 1.2rem;
     font-weight: 700;
 
@@ -57,7 +57,7 @@
  .quiz-header #count-down {
     font-size: 1.2rem;
     font-weight: 700;
-    background-color: aqua;
+    background-color: rgb(141, 141, 150);
     padding: 5px;
     margin: 1px;
     color: white;
@@ -66,9 +66,9 @@
 .quiz-box #question {
     font-size: 1.5rem;
     font-weight: 600;
-    color: orchid;
-    border: 1pèx solid #777;
-    border-width: 1px 0;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(141, 141, 150);
+    border-width: 2px 0;
     padding: 5px 0;
 }
 .buttons {
@@ -78,11 +78,11 @@
 }
 .btn {
     text-align: left;
-    background-color: white;
+    background-color: rgb(58, 58, 58);
     width: 100%;
     font-size: 1rem;
-    color: black;
-    border:1px solid red;
+    color: rgb(255, 255, 255);
+    border:3px solid rgb(141, 141, 150);
     border-radius: 5px;
     margin: 7px 0;
     padding: 10px;
@@ -91,12 +91,12 @@
 }
 .btn:hover {
     cursor: pointer;
-    background-color: blue;
+    background-color: rgb(141, 141, 150);
     color: white;
 
 }
 .btn:active {
-    background-color: green;
+    background-color: rgb(209, 208, 208);
 }
 #score {
     color: black;
@@ -114,13 +114,13 @@
     font-weight: 600;
     color: #fff;
     text-decoration: none;
-    background-color: orangered;
+    background-color: rgb(58, 58, 58);
     padding: 1rem;
     border-radius: 5px;
     transition: all .3s;
 }
 .quiz-repeat a:hover {
-    background-color:red ;
+    background-color:rgb(141, 141, 150);
 }
 footer{
     display: flex;
