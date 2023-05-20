@@ -110,6 +110,7 @@
     margin: 0 auto;
 }
 .quiz-repeat a {
+    width: 60%;
     font-size: 1.6rem;
     font-weight: 600;
     color: #fff;
