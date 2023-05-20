@@ -43,6 +43,12 @@ class Quiz {
       // Show question
       let questionElement = document.getElementById("question");
       questionElement.innerHTML = quiz.getQuestionsIndex().text;
+
+      // Reset answer selection
+      let answerElements = document.getElementsByClassName("btn");
+      for (let i = 0; i < answerElements.length; i++) {
+        answerElements[i].classList.remove("selected");
+}
   
       // Show options
       let choices = quiz.getQuestionsIndex().choices;
@@ -60,6 +66,16 @@ class Quiz {
   function guess(id, guess) {
     let button = document.getElementById(id);
     button.onclick = function () {
+         // Remove previous selected answer
+    let previousSelected = document.getElementsByClassName("selected");
+    if (previousSelected.length > 0) {
+      previousSelected[0].classList.remove("selected");
+    }
+
+    // Add selected class to current answer
+    button.classList.add("selected");
+
+    // Process the answer
       quiz.guess(guess);
       displayQuestion();
     };
