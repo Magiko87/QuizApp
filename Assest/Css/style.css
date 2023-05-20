@@ -122,3 +122,11 @@
 .quiz-repeat a:hover {
     background-color:red ;
 }
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    padding:10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
