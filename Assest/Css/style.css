@@ -154,7 +154,8 @@ footer{
         width: 100%; /* Assicurati che il footer abbia la larghezza completa */
         margin-top: 10px; /* Sposta il footer più in alto */
         font-size: 14px; /* Riduci la dimensione del font del footer */
+        text-align: center;/* Sposta al centro
       }
     
-  }
+  
   
