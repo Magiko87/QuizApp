@@ -43,12 +43,6 @@ class Quiz {
       // Show question
       let questionElement = document.getElementById("question");
       questionElement.innerHTML = quiz.getQuestionsIndex().text;
-
-      // Reset answer selection
-      let answerElements = document.getElementsByClassName("btn");
-      for (let i = 0; i < answerElements.length; i++) {
-        answerElements[i].classList.remove("selected");
-}
   
       // Show options
       let choices = quiz.getQuestionsIndex().choices;
@@ -58,10 +52,15 @@ class Quiz {
         guess("btn" + i, choices[i]);
       }
   
+      // Remove selection from previous answer
+      let previousSelected = document.querySelector(".btn.selected");
+      if (previousSelected) {
+        previousSelected.classList.remove("selected");
+      }
+  
       showProgress();
     }
   }
-  
   // Guess function
   function guess(id, guess) {
     let button = document.getElementById(id);
