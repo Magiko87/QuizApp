@@ -102,9 +102,9 @@
 }
 .btn:active,
 .btn:focus {
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
+    background-color: rgb(65, 65, 65);
+    color: white;
+  }
 #score {
     color: black;
     text-align: center;
