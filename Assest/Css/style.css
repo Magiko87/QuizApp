@@ -96,14 +96,14 @@
     color: black;
 
 }
-.btn:active {
-    background: rgb(65, 65, 65);
-    color: white;
-}
+
 .btn:active,
 .btn:focus {
     background-color: rgb(65, 65, 65);
     color: white;
+  }
+  button:focus {
+    outline: none;
   }
 #score {
     color: black;
