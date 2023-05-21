@@ -36,31 +36,37 @@ class Quiz {
   }
   
   // Display question
-  function displayQuestion() {
-    if (quiz.isEnded()) {
-      showScores();
-    } else {
-      // Show question
-      let questionElement = document.getElementById("question");
-      questionElement.innerHTML = quiz.getQuestionsIndex().text;
-  
-      // Show options
-      let choices = quiz.getQuestionsIndex().choices;
-      for (let i = 0; i < choices.length; i++) {
-        let choiceElement = document.getElementById("choice" + i);
-        choiceElement.innerHTML = choices[i];
-        guess("btn" + i, choices[i]);
-      }
-  
-      // Remove selection from previous answer
-      let previousSelected = document.querySelector(".btn.selected");
-      if (previousSelected) {
-        previousSelected.classList.remove("selected");
-      }
-  
-      showProgress();
+  Copy code
+function displayQuestion() {
+  if (quiz.isEnded()) {
+    showScores();
+  } else {
+    // Show question
+    let questionElement = document.getElementById("question");
+    questionElement.innerHTML = quiz.getQuestionsIndex().text;
+
+    // Show options
+    let choices = quiz.getQuestionsIndex().choices;
+    for (let i = 0; i < choices.length; i++) {
+      let choiceElement = document.getElementById("choice" + i);
+      choiceElement.innerHTML = choices[i];
     }
+
+    // Remove selection from previous answer
+    let previousSelected = document.querySelector(".btn.selected");
+    if (previousSelected) {
+      previousSelected.classList.remove("selected");
+    }
+
+    // Add click event listener to options
+    for (let i = 0; i < choices.length; i++) {
+      let choiceButton = document.getElementById("btn" + i);
+      guess(choiceButton, choices[i]);
+    }
+
+    showProgress();
   }
+}
   // Guess function
   function guess(id, guess) {
     let button = document.getElementById(id);
@@ -102,16 +108,16 @@ class Quiz {
   
   // Create quiz questions
   let questions = [
-    new Question("Per quale azienda lavora ora Marco?", ["Martino Tlc", "Martino", "Tecno2000", "Palazzo Italia"], "Martino"),
-    new Question("Quanto è preoccupante la follia di Petillo?", ["Poco", "Abbastanza", "Assai", "Irrecuperabile"], "Irrecuperabile"),
-    new Question("Con quanti colleghi va daccordo Mirko?", ["Nessuno", "Pochi", "Molti", "Tutti"], "Pochi"),
-    new Question("Di chi è la Cit.'Io sono Palazzo Italia'?", ["Moviola", "Paolo", "Stefano", "Buratti"], "Stefano"),
-    new Question("Chi ha inventato l'intuitiva parola 'PIOVE'?", ["Riccardo", "Ivana", "Daniele", "Tarantelli"], "Daniele"),
-    // new Question("", ["Paris", "London", "Berlin", "Rome"], "Paris"),
-    // new Question("What's the capital of France?", ["Paris", "London", "Berlin", "Rome"], "Paris"),
-    // new Question("What's your name?", ["Daniele", "Luca", "Marco", "Gianni"], "Daniele"),
-    // new Question("What's your favorite color?", ["Red", "Blue", "Green", "Yellow"], "Blue"),
-    // new Question("What's the capital of France?", ["Paris", "London", "Berlin", "Rome"], "Paris"),
+    new Question("Quale era il nome delle Torri gemelle,oggetto dell'attentato dell'11 settembre?", [" Twinks Towers", "B Twin Towers ", "Twist Towers ", "Nessuna delle risposte "], "Twin Towers"),
+    new Question("Perché l'ago della bussola punta verso il Nord?", ["La terra è come un magnete e l'ago magnetizzato punta verso il suo polo opposto (corrispondente al nord) ", "Perchè il metallo conduce la temperatura e il freddo lo attrae", "Nessuna delle risposte", "Nella Polo nord si trovano più particelle magnetiche che in ogni altra area della terra"], "La terra è come un magnete e l'ago magnetizzato punta verso il suo polo opposto (corrispondente al nord)"),
+    new Question("In quale materiale è realizzato il più celebre David di Donatello?", ["Avorio", "Marmo", "Bronzo", "Gesso"], "Bronzo"),
+    new Question("Chi è stato Presidente degli USA immediatamente prima di Barack Obama?", ["Jimmy Carter ", "George Bush ", "Ronald Reagan", "Bill Clinton "], "Bill Clinton "),
+    new Question("In che anno il Bergoglio è diventato Papa?", ["2011", "2013", "2015", "2017"], "2013"),
+    new Question("In quale capitale è stata approvata la Costituzione dell'Unione Europea?", ["Roma", "Berlino", "Londra", "Bruxelles"], "Roma"),
+    new Question("Quando è entrato in vigore in Italia il divieto di fumare nei locali pubblici? ", ["2005", "2002", "2006", "2003"], "2003"),
+    new Question("Cosa significa la sigla Ris nell'Arma dei Carabinieri?", [" Reparto indagini sofisticazioni", "Reggimento italiano sottufficiali", "Reparto investigazioni scientifiche", "GianRaggruppamento italiano soldati"], "Reparto investigazioni scientifiche "),
+    new Question("Nei tempi antichi e fino al secolo scorso si chiamava 'Persia'.Qual è il nome odierno di questo paese oggi?", ["Iran", "Kuwait", "Arabia Saudita", "Iraq"], "Iran"),
+    new Question("Chi fu soprannominato il 'Flagello di Dio'?", ["Gengis Khan", "Attila", "Napoleone", "Alessandro Magno"], "Attila"),
   ];
   let quiz = new Quiz(questions);
   
