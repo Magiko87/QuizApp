@@ -30,6 +30,7 @@
     padding: 1rem 5rem 5rem 5rem;
     border: 3px solid rgb(248, 247, 246);
     border-radius: 5px;
+    box-shadow:  0 20px 30px rgba(0, 0, 0, 0.5);
 
  }
  .quiz-box h1 {
@@ -151,6 +152,7 @@ footer{
         justify-content: space-between; /* Aggiungi spazio tra gli elementi interni */
         align-items: center;
         height: 100vh;
+        overflow-y: auto;
       }
     
       footer {
