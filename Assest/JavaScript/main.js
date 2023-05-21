@@ -102,15 +102,16 @@ class Quiz {
   
   // Create quiz questions
   let questions = [
-    new Question("Quale era il nome delle Torri gemelle,oggetto dell'attentato dell'11 settembre?", [" Twinks Towers", "Twin Towers ", "Twist Towers ", "Nessuna delle risposte "],"Twin Towers"),
+    new Question("Quale era il nome delle Torri gemelle,oggetto dell'attentato dell'11 settembre?", [" Twinks Towers", "Twin Towers", "Twist Towers", "Nessuna delle risposte "],"Twin Towers"),
     new Question("Perché l'ago della bussola punta verso il Nord?", ["La terra è come un magnete e l'ago magnetizzato punta verso il suo polo opposto.","Perchè il metallo conduce la temperatura e il freddo lo attrae","Nessuna delle risposte","Nel Polo nord si trovano più particelle magnetiche che in ogni altra area della terra"], "La terra è come un magnete e l'ago magnetizzato punta verso il suo polo opposto.") ,
     new Question("Chi è stato Presidente degli U.S.A. immediatamente prima di Barack Obama?", ["Jimmy Carter ", "George Bush","Ronald Reagan", "Bill Clinton"], "George Bush"),
     new Question("In che anno il Bergoglio è diventato Papa?", ["2011", "2013", "2015", "2017"],"2013"),
     new Question("In quale capitale è stata approvata la Costituzione dell'Unione Europea?", ["Roma", "Berlino", "Londra", "Bruxelles"], "Roma"),
     new Question("Quando è entrato in vigore in Italia il divieto di fumare nei locali pubblici? ", ["2005", "2002", "2006", "2003"], "2003"),
-    new Question("Cosa significa la sigla Ris nell'Arma dei Carabinieri?", [" Reparto indagini sofisticazioni", "Reggimento italiano sottufficiali", "Reparto investigazioni scientifiche", "Raggruppamento italiano soldati"], "Reparto investigazioni scientifiche "),
+    new Question("Cosa significa la sigla Ris nell'Arma dei Carabinieri?", [" Reparto indagini sofisticazioni", "Reggimento italiano sottufficiali", "Reparto investigazioni scientifiche", "Raggruppamento italiano soldati"], "Reparto investigazioni scientifiche"),
     new Question("Nei tempi antichi e fino al secolo scorso si chiamava 'Persia'.Qual è il nome odierno di questo paese oggi?", ["Iran", "Kuwait", "Arabia Saudita", "Iraq"], "Iran"),
     new Question("Chi fu soprannominato il 'Flagello di Dio'?", ["Gengis Khan", "Attila", "Napoleone", "Alessandro Magno"], "Attila"),
+    new Question("La Capitale dell'Algeria è ?", ["Fez", "Abu Dabi", "Algeri", " Tunisi"], "Algeri"),
   ];
   let quiz = new Quiz(questions);
   
