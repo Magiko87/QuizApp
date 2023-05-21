@@ -36,37 +36,31 @@ class Quiz {
   }
   
   // Display question
-  Copy code
-function displayQuestion() {
-  if (quiz.isEnded()) {
-    showScores();
-  } else {
-    // Show question
-    let questionElement = document.getElementById("question");
-    questionElement.innerHTML = quiz.getQuestionsIndex().text;
-
-    // Show options
-    let choices = quiz.getQuestionsIndex().choices;
-    for (let i = 0; i < choices.length; i++) {
-      let choiceElement = document.getElementById("choice" + i);
-      choiceElement.innerHTML = choices[i];
+  function displayQuestion() {
+    if (quiz.isEnded()) {
+      showScores();
+    } else {
+      // Show question
+      let questionElement = document.getElementById("question");
+      questionElement.innerHTML = quiz.getQuestionsIndex().text;
+  
+      // Show options
+      let choices = quiz.getQuestionsIndex().choices;
+      for (let i = 0; i < choices.length; i++) {
+        let choiceElement = document.getElementById("choice" + i);
+        choiceElement.innerHTML = choices[i];
+        guess("btn" + i, choices[i]);
+      }
+  
+      // Remove selection from previous answer
+      let previousSelected = document.querySelector(".btn.selected");
+      if (previousSelected) {
+        previousSelected.classList.remove("selected");
+      }
+  
+      showProgress();
     }
-
-    // Remove selection from previous answer
-    let previousSelected = document.querySelector(".btn.selected");
-    if (previousSelected) {
-      previousSelected.classList.remove("selected");
-    }
-
-    // Add click event listener to options
-    for (let i = 0; i < choices.length; i++) {
-      let choiceButton = document.getElementById("btn" + i);
-      guess(choiceButton, choices[i]);
-    }
-
-    showProgress();
   }
-}
   // Guess function
   function guess(id, guess) {
     let button = document.getElementById(id);
